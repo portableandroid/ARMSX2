@@ -106,7 +106,7 @@ build libwebp libwebp/build -DWEBP_BUILD_ANIM_UTILS=OFF -DWEBP_BUILD_CWEBP=OFF \
 # SDL is here for the input and audio sources the emulator compiles against.
 # Nothing in a libretro core opens an SDL window, so its Java side never runs.
 clone https://github.com/libsdl-org/SDL sdl3 "$SDL"
-build sdl3 sdl3/build -DSDL_SHARED=OFF -DSDL_STATIC=ON -DSDL_TESTS=OFF -DSDL_EXAMPLES=OFF
+build sdl3 sdl3/build -DSDL_SHARED=OFF -DSDL_STATIC=ON -DSDL_TESTS=OFF -DSDL_EXAMPLES=OFF -DSDL_SYSTEM_ICONV_DEFAULT=OFF -DSDL_SYSTEM_ICONV=OFF -DSDL_LIBICONV=OFF
 
 clone https://github.com/freetype/freetype freetype "$FREETYPE"
 build freetype freetype/build -DFT_DISABLE_HARFBUZZ=ON -DFT_DISABLE_BROTLI=ON \
